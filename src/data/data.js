@@ -1,27 +1,6 @@
 import WorkIm from "../assets/projects/sushirestaurant.png";
 import RealEst from "../assets/projects/sushirestaurant.png";
-export const links = () => [
-  {
-    name: "Home",
-    hash: "#home",
-  },
-  {
-    name: "About",
-    hash: "#about",
-  },
-  {
-    name: "Skills",
-    hash: "#skills",
-  },
-  {
-    name: "Projects",
-    hash: "#projects",
-  },
-  {
-    name: "Contact",
-    hash: "#contatc",
-  },
-];
+
 export const data = [
   {
     id: 1,
