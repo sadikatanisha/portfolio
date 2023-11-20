@@ -2,12 +2,10 @@ import React from "react";
 import { data } from "../data/data.js";
 
 const Work = () => {
-  // projects file
-  const project = data;
-  //setProject(data);
+  const projects = data;
 
   return (
-    <div name="work" className="w-full md:h-screen text-gray-300 bg-[#0a192f]">
+    <div name="work" className="w-full h-full text-gray-300 bg-[#0a192f] py-10">
       <div className="max-w-[1000px] mx-auto p-4 flex flex-col justify-center w-full h-full">
         <div className="pb-8">
           <p className="text-4xl font-bold inline border-b-4 text-gray-300 border-teal-600">
@@ -16,49 +14,55 @@ const Work = () => {
           <p className="py-6">Check out some of my recent work</p>
         </div>
 
-        {/* container for projects */}
-        <div className="grid sm:grid-cols-2 md:grid-cols-2 gap-4 ">
-          {/* Gird Item */}
-          {project.map((item, index) => (
+        <div className="grid sm:grid-cols-1 md:grid-cols-2 gap-4">
+          {projects.map((project, index) => (
             <div
               key={index}
-              style={{
-                backgroundImage: `url(${item.image})`,
-                backgroundSize: "cover",
-                backgroundPosition: "center",
-                backgroundRepeat: "no-repeat",
-                paddingTop: "56.25%",
-              }}
-              className="relative shadow-lg shadow-[#040c16] group container rounded-md 
-              flex justify-center text-center items-center mx-auto content-div "
+              className="bg-transparent p-4 rounded-md shadow-lg"
             >
-              {/* Dark overlay on hover */}
-              <div className="absolute inset-0 bg-black opacity-0 group-hover:opacity-70 rounded-md"></div>
-              {/* Hover effect for images */}
-              <div className="opacity-0 group-hover:opacity-100 text-white absolute inset-0 flex flex-col justify-center items-center">
-                <span className="text-2xl font bold text-white tracking-wider ">
-                  {item.name}
-                </span>
-                <div className="pt-8 text-center ">
-                  {/* eslint-disable-next-line */}
-                  <a href={item.github} target="_blank">
-                    <button
-                      className="text-center rounded-lg px-4 py-3 m-2
-                       bg-white text-gray-700 font-bold text-lg"
-                    >
-                      Code
-                    </button>
-                  </a>
-                  {/* eslint-disable-next-line */}
-                  <a href={item.live} target="_blank">
-                    <button
-                      className="text-center rounded-lg px-4 py-3 m-2
-                       bg-white text-gray-700 font-bold text-lg"
-                    >
-                      Live
-                    </button>
-                  </a>
-                </div>
+              {/* Image */}
+              <img
+                src={project.image}
+                alt={project.name}
+                className="w-full h-40 object-cover rounded-md mb-4"
+              />
+
+              {/* Description */}
+              <p className="text-lg font-bold mb-2">{project.name}</p>
+              <p className="text-gray-600 mb-4">{project.description}</p>
+
+              {/* Tech Stacks */}
+              <div className="flex mb-4">
+                {project.techStack.map((tech, techIndex) => (
+                  <span
+                    key={techIndex}
+                    className="bg-gray-200 text-gray-700 rounded-md px-2 mr-2 text-sm"
+                  >
+                    {tech}
+                  </span>
+                ))}
+              </div>
+
+              {/* Buttons */}
+              <div className="flex space-x-4">
+                <a
+                  href={project.github}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <button className="bg-gray-100 px-5 py-2 rounded-full  dark:bg-gray-800 border border-gray-500">
+                    Code
+                  </button>
+                </a>
+                <a
+                  href={project.live}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <button className="bg-gray-100 px-5 py-2 rounded-full  dark:bg-gray-800 border border-gray-500">
+                    Live
+                  </button>
+                </a>
               </div>
             </div>
           ))}

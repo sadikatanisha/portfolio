@@ -1,7 +1,7 @@
 const Skills = () => {
   const frontEndSkills = ["HTML", "CSS", "JavaScript", "React", "GitHub"];
-  const backEndSkills = ["Node.js", "MongoDB"];
-  const toolsSkills = ["Tailwind CSS"];
+  const backEndSkills = ["Node.js", "MongoDB", "SQL"];
+  const toolsSkills = ["Tailwind CSS", "Express", "Mongoose"];
 
   return (
     <div name="skills" className="w-full h-screen bg-[#0a192f] text-gray-300">

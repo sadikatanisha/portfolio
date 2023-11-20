@@ -19,18 +19,27 @@ const Home = () => {
             Developer and designer.
           </h3>
           <p className="text-md py-5 leading-8 text-gray-800 dark:text-gray-200 max-w-xl mx-auto md:text-xl">
-            Freelancer providing services for programming and design content
-            needs. Join me down below and let's get cracking!
+            Software Engineer providing services for programming and design
+            content needs. Join me down below and let's create!
           </p>
           <div className="text-5xl flex justify-center gap-16 py-3 text-gray-600 dark:text-gray-400">
-            <AiFillTwitterCircle />
-            <AiFillLinkedin />
-            <AiFillGithub />
+            <a href="https://twitter.com/tanishasadika" target="__blank">
+              <AiFillTwitterCircle className="cursor-pointer" />
+            </a>
+            <a
+              href="https://www.linkedin.com/in/sadika-rahman/"
+              target="__blank"
+            >
+              <AiFillLinkedin className="cursor-pointer" />
+            </a>
+            <a href="https://github.com/sadikatanisha" target="__blank">
+              <AiFillGithub className="cursor-pointer" />
+            </a>
           </div>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-2 px-4 text-lg font-medium">
             <Link
               to="contact"
-              className="group bg-teal-600 text-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 hover:bg-teal-500 active:scale-105 transition"
+              className="group bg-teal-600 text-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 hover:bg-teal-500 active:scale-105 transition cursor-pointer"
             >
               Contact Me
             </Link>
