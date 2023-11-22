@@ -6,12 +6,12 @@ import mvcBlog from "../assets/projects/MVC-srchitecture.png";
 export const data = [
   {
     id: 1,
-    name: "React JS Application",
-    description: "lw wejw f fwfwjef  wf wfw",
+    name: "MERN Application",
+    description: "A MERN social media Appliation",
     image: sushirestaurant,
     github: "",
     live: "",
-    techStack: ["react"],
+    techStack: ["react", "Express", "Nodejs", "MongoDb"],
   },
   {
     id: 2,
