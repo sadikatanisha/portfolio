@@ -18,7 +18,7 @@ const Work = () => {
           {projects.map((project, index) => (
             <div
               key={index}
-              className="bg-transparent p-4 rounded-md shadow-lg"
+              className="bg-transparent p-4 rounded-md shadow-lg flex flex-col h-full"
             >
               {/* Image */}
               <img
@@ -27,24 +27,28 @@ const Work = () => {
                 className="w-full h-40 object-cover rounded-md mb-4"
               />
 
-              {/* Description */}
-              <p className="text-lg font-bold mb-2">{project.name}</p>
-              <p className="text-gray-600 mb-4">{project.description}</p>
+              {/* Description and Tech Stacks */}
+              <div className="flex flex-col flex-grow">
+                <div>
+                  <p className="text-lg font-bold mb-2">{project.name}</p>
+                  <p className="text-gray-600 mb-4">{project.description}</p>
+                </div>
 
-              {/* Tech Stacks */}
-              <div className="flex mb-4">
-                {project.techStack.map((tech, techIndex) => (
-                  <span
-                    key={techIndex}
-                    className="bg-gray-200 text-gray-700 rounded-md px-2 mr-2 text-sm"
-                  >
-                    {tech}
-                  </span>
-                ))}
+                {/* Tech Stacks */}
+                <div className="flex mb-4 mt-auto">
+                  {project.techStack.map((tech, techIndex) => (
+                    <span
+                      key={techIndex}
+                      className="bg-gray-200 text-gray-700 rounded-md px-2 mr-2 mb-2 text-sm"
+                    >
+                      {tech}
+                    </span>
+                  ))}
+                </div>
               </div>
 
               {/* Buttons */}
-              <div className="flex space-x-4">
+              <div className="flex space-x-4 mt-auto">
                 <a
                   href={project.github}
                   target="_blank"
